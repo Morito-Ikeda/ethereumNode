@@ -18,7 +18,9 @@ spec:
           volumeMounts:
             - name: chain
               mountPath: /root
+          ports:
+            - containerPort: 8545
       volumes:
         - name: chain
           hostPath:
-            path: ./chain
+            path: /home/chain-data
