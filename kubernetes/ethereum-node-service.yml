@@ -9,7 +9,7 @@ spec:
   ports:
     - port: 8545
       targetPort: 8545
-      name: http
+      name: tcp
     - port: 30303
       targetPort: 30303
       name: udp
