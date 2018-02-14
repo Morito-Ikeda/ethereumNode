@@ -1,0 +1,14 @@
+# ローカル用
+version: '2'
+services:
+  geth:
+    container_name: ethereum-node
+    restart: always
+    image: ethereum/client-go
+    volumes:
+      - ./chain:/root
+    privileged: true
+    ports:
+      - 8545:8545
+      - 30303:30303
+    command: --light --rpc --rpcaddr 0.0.0.0 --rpcport 8545
