@@ -9,7 +9,9 @@ spec:
   ports:
     - port: 8545
       targetPort: 8545
+      name: http
     - port: 30303
       targetPort: 30303
+      name: udp
   selector:
     app: ethereum-node
