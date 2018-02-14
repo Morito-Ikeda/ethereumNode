@@ -15,3 +15,10 @@ spec:
         - image: ethereum/client-go
           name: ethereum-node
           args: ["--light", "--rpc", "--rpcaddr", "0.0.0.0"]
+          volumeMounts:
+            - name: chain
+              mountPath: /root
+      volumes:
+        - name: chain
+          HostDir:
+            path: ./chain
