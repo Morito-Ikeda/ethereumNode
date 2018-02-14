@@ -6,7 +6,7 @@ metadata:
     app: ethereum-node
 spec:
   replicas: 1
-  teplate:
+  template:
     metadata:
       labels:
         app: ethereum-node
@@ -20,5 +20,5 @@ spec:
               mountPath: /root
       volumes:
         - name: chain
-          HostDir:
+          hostPath:
             path: ./chain
