@@ -8,7 +8,7 @@ spec:
     metadata:
       labels:
         app: rpc-sample
-        tier: ethereum-node
+        role: ethereum-node
     spec:
       containers:
         - name: ethereum-cliant
