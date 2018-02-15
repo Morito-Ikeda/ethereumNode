@@ -2,18 +2,17 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: ethereum-node
-  labels:
-    app: ethereum-node
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: ethereum-node
+        app: rpc-sample
+        tier: ethereum-node
     spec:
       containers:
-        - image: ethereum/client-go
-          name: ethereum-node
+        - name: ethereum-cliant
+          image: ethereum/client-go
           args: ["--light", "--rpc", "--rpcaddr", "0.0.0.0"]
           volumeMounts:
             - name: chain

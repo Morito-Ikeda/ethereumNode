@@ -3,15 +3,15 @@ kind: Service
 metadata:
   name: ethereum-node
   labels:
-    app: ethereum-node
+    app: rpc-sample
+    tier: ethereum-node
 spec:
   type: LoadBalancer
   ports:
     - port: 8545
-      targetPort: 8545
       name: tcp
     - port: 30303
-      targetPort: 30303
       name: udp
   selector:
-    app: ethereum-node
+    app: rpc-sample
+    tier: ethereum-node
